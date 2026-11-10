@@ -1,0 +1,7 @@
+{
+  "name":"idea-exchange",
+  "private":true,
+  "type":"module",
+  "scripts":{"start":"node render-server.mjs","build":"node build.mjs","test":"node test-forum.mjs","test:render":"node test-render.mjs","preview":"node local-preview.mjs"},
+  "engines":{"node":">=22.13"}
+}
