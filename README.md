@@ -12,6 +12,10 @@ Run `npm test` for the workflow and authorization checks. Run `npm run build` to
 
 ### Render
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2Fwebsterxu%2Fidea-exchange)
+
+The Blueprint sets up a paid Starter web service with a 1 GB persistent disk and generates the session secret. Review the workspace and price in Render. Enter the GitHub OAuth credentials in Render when prompted. Use the steps below for manual setup.
+
 Connect this repository to a Node web service on its main branch. Use Node.js 24, build command `npm test && npm run test:render`, and start command `npm start`.
 
 Attach a persistent disk at `/var/data`, then set `FORUM_DATA_DIR=/var/data`. Persistent disks require a paid Render service. The database stores discussion records and uploaded files. Deployments without persistent storage lose their data when restarted.

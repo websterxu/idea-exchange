@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: idea-exchange
+    runtime: node
+    plan: starter
+    branch: main
+    autoDeployTrigger: off
+    buildCommand: npm test && npm run test:render
+    startCommand: npm start
+    healthCheckPath: /
+    disk:
+      name: forum-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "24.21.0"
+      - key: FORUM_DATA_DIR
+        value: /var/data
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: GITHUB_CLIENT_ID
+        sync: false
+      - key: GITHUB_CLIENT_SECRET
+        sync: false
